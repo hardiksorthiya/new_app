@@ -94,8 +94,7 @@
                                     alt="My Digital Card Member">
                             </div>
                             <h1 class="top-heading-home text-white">Digital Business<br> Card</h1>
-                            <h5 class="sub-heading-home">Quisque congue sem nisi, eget bibendum quam tristique In
-                                commodo dolor sed.</h5>
+                            <h5 class="sub-heading-home">Unlock the power of modern networking with our digital business cards! Our innovative solutions help you make a lasting impression, offering a convenient and eco-friendly way to share your contact information.</h5>
                             <div class="member-showcase">
                                 <div class="row">
                                     <div class="col-4">
@@ -148,10 +147,7 @@
                             <h2 class="heading-text-theme text-white margin-bottom-hp">
                                 Designed From The Ground Up To Protect Privacy
                             </h2>
-                            <h5 class="sub-heading-home margin-bottom-hp">Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor incididunt</h5>
-                            <h5 class="sub-heading-home margin-bottom-hp">Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                            <h5 class="sub-heading-home margin-bottom-hp">Welcome to Digital Buisness Card, where we revolutionize the way you connect and network. Specializing in digital business cards, we offer a modern, eco-friendly solution that makes sharing your contact information effortless and impactful. <br><br>Our mission is to provide innovative, customizable, and interactive digital business cards that help professionals and businesses leave a lasting impression. With a focus on sustainability, convenience, and cutting-edge technology, we strive to enhance your networking experience in today's digital age. <br><br>Join us in embracing the future of professional connections and discover the power of digital business cards with Corpo Key.</h5>
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-7">
@@ -174,35 +170,31 @@
                     </div>
                     <div class="col-lg-8 col-md-8 col-xl-8">
                         <h2 class="heading-text-theme text-white margin-bottom-hp">
-                            Let's Get To Know <br>Bankuy's Features
+                            Let's Get To Know <br>Digital Busienss Card
                         </h2>
                         <div class="row feature-content-home">
                             <div class="col-lg-6">
                                 <div class="feature-right-onebox">
-                                    <h2 class="text-white margin-bottom-hp">Personal Finance</h2>
-                                    <h5 class="sub-heading-home margin-bottom-hp">Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                                    <h2 class="text-white margin-bottom-hp">Customize your card</h2>
+                                    <h5 class="sub-heading-home margin-bottom-hp">Personalize your digital business card with your brand colors, logo, and unique style.</h5>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="feature-right-onebox">
-                                    <h2 class="text-white margin-bottom-hp">Personal Finance</h2>
-                                    <h5 class="sub-heading-home margin-bottom-hp">Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                                    <h2 class="text-white margin-bottom-hp">Interactive Elements</h2>
+                                    <h5 class="sub-heading-home margin-bottom-hp">Embed videos, links to social media profiles, websites, and portfolios.</h5>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="feature-right-onebox">
-                                    <h2 class="text-white margin-bottom-hp">Personal Finance</h2>
-                                    <h5 class="sub-heading-home margin-bottom-hp">Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                                    <h2 class="text-white margin-bottom-hp">Instant Sharing</h2>
+                                    <h5 class="sub-heading-home margin-bottom-hp">Share your digital business card via QR code, email, or text message in just a few clicks.</h5>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="feature-right-onebox">
-                                    <h2 class="text-white margin-bottom-hp">Personal Finance</h2>
-                                    <h5 class="sub-heading-home margin-bottom-hp">Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                                    <h2 class="text-white margin-bottom-hp">Eco-Friendly</h2>
+                                    <h5 class="sub-heading-home margin-bottom-hp">Reduce paper waste with our sustainable digital solution.</h5>
                                 </div>
                             </div>
                         </div>
@@ -220,8 +212,7 @@
                         </h2>
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <h5 class="sub-heading-home margin-bottom-hp">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt</h5>
+                        <h5 class="sub-heading-home margin-bottom-hp">Creating a digital business card typically involves several steps, from logging in to customizing the card. Here’s a detailed guide:</h5>
                     </div>
                 </div>
                 <div class="row step-create-bcard">
@@ -231,10 +222,9 @@
                                 01
                             </h2>
                             <h2 class="heading-text-theme text-white margin-bottom-hp">
-                                Prepare Document
+                                Login<br><br>
                             </h2>
-                            <h5 class="sub-heading-home margin-bottom-hp">Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                            <h5 class="sub-heading-home margin-bottom-hp">Use your newly created credentials to log in to your account.</h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -243,10 +233,10 @@
                                 02
                             </h2>
                             <h2 class="heading-text-theme text-white margin-bottom-hp">
-                                Prepare Document
+                                Choose a Plan
                             </h2>
-                            <h5 class="sub-heading-home margin-bottom-hp">Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                            <h5 class="sub-heading-home margin-bottom-hp">Review the available plans and choose the one that suits your needs.
+                            </h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -255,10 +245,9 @@
                                 03
                             </h2>
                             <h2 class="heading-text-theme text-white margin-bottom-hp">
-                                Prepare Document
+                                Customize Design
                             </h2>
-                            <h5 class="sub-heading-home margin-bottom-hp">Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                            <h5 class="sub-heading-home margin-bottom-hp">Adjust the layout to ensure all information is clearly visible and well-organized.</h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -267,10 +256,10 @@
                                 04
                             </h2>
                             <h2 class="heading-text-theme text-white margin-bottom-hp">
-                                Prepare Document
+                                Save and Share
                             </h2>
-                            <h5 class="sub-heading-home margin-bottom-hp">Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                            <h5 class="sub-heading-home margin-bottom-hp">Save your digital business card.
+                                Share it via email, social media, or download it for printing if needed.</h5>
                         </div>
                     </div>
                 </div>
