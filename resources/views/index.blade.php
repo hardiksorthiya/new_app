@@ -268,39 +268,44 @@
         <section class="feature-section margin-bottom-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-md-8 col-xl-8">
-                        <h2 class="heading-text-theme text-white margin-bottom-hp">
-                            Let's Get To Know <br>Bankuy's Features
+                    <div class="col-lg-12 col-md-12 col-xl-12">
+                        <h2 class="heading-text-theme text-white margin-bottom-hp text-center">
+                            Feture Themes
                         </h2>
                         <div class="row feature-content-home">
-                            <div class="col-lg-6 d-flex">
-
-                                <h2 data-max="50" class="text-white d-flex flex-column align-items-center">+ <span>Happy
-                                        Customers</span></h2>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
                             </div>
-                            <div class="col-lg-6 d-flex">
-
-                                <h2 data-max="50" class="text-white d-flex flex-column align-items-center">+ <span>Happy
-                                        Customers</span></h2>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
                             </div>
-                            <div class="col-lg-6 d-flex">
-
-                                <h2 data-max="50" class="text-white d-flex flex-column align-items-center">+ <span>Happy
-                                        Customers</span></h2>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
                             </div>
-                            <div class="col-lg-6 d-flex">
-
-                                <h2 data-max="50" class="text-white d-flex flex-column align-items-center">+ <span>Happy
-                                        Customers</span></h2>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
                             </div>
-
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-xl-4">
-                        <div class="left-images-feature">
-                            <img class="feature-image-one" src="assets/images/esxtra1.png" alt="My Digital Card">
-                        </div>
-                    </div>
+                    
 
                 </div>
                 <div class="background-feature"></div>
@@ -321,13 +326,13 @@
                     <div class="col-lg-4">
                         <div class="step-1">
                             <h2 class="heading-text-theme text-white margin-bottom-hp">
-                                499 ₹<span class="sub-heading-home">/MONTH</span></h2>
+                                999 ₹<span class="sub-heading-home">/Year</span></h2>
                             <h2 class="heading-text-theme text-white margin-bottom-hp">
                                 Silver Plan
                             </h2>
                             <h5 class="sub-heading-home margin-bottom-hp">
                                 <ul class="list-price" style="list-style: circle;">
-                                    <li>70 Exclusive Premium themes</li>
+                                    <li>20 Exclusive Premium themes</li>
                                     <li>Share cards with anyone, Unlimited times</li>
                                     <li>Update card Unlimited times.</li>
                                     <li>20 Products Ecommerce Store</li>
@@ -342,14 +347,14 @@
                     <div class="col-lg-4">
                         <div class="step-1">
                             <h2 class="heading-text-theme text-white margin-bottom-hp">
-                                499 ₹<span class="sub-heading-home">/MONTH</span>
+                                1499 ₹<span class="sub-heading-home">/Year</span>
                             </h2>
                             <h2 class="heading-text-theme text-white margin-bottom-hp">
-                                Silver Plan
+                                Gold Plan
                             </h2>
                             <h5 class="sub-heading-home margin-bottom-hp">
                                 <ul class="list-price" style="list-style: circle;">
-                                    <li>70 Exclusive Premium themes</li>
+                                    <li>20 Exclusive Premium themes</li>
                                     <li>Share cards with anyone, Unlimited times</li>
                                     <li>Update card Unlimited times.</li>
                                     <li>20 Products Ecommerce Store</li>
@@ -366,13 +371,13 @@
                     <div class="col-lg-4">
                         <div class="step-4">
                             <h2 class="heading-text-theme text-white margin-bottom-hp">
-                                499 ₹<span class="sub-heading-home">/MONTH</span></h2>
+                                Contact Now</h2>
                             <h2 class="heading-text-theme text-white margin-bottom-hp">
-                                Silver Plan
+                                Franchise Plan
                             </h2>
                             <h5 class="sub-heading-home margin-bottom-hp">
                                 <ul class="list-price" style="list-style: circle;">
-                                    <li>70 Exclusive Premium themes</li>
+                                    <li>20 Exclusive Premium themes</li>
                                     <li>Share cards with anyone, Unlimited times</li>
                                     <li>Update card Unlimited times.</li>
                                     <li>20 Products Ecommerce Store</li>
@@ -380,7 +385,7 @@
                                 </ul>
                             </h5>
                             <a href="#" class="d-flex justify-content-center">
-                                <button class="btn-hp-style btn text-white">Order Now</button>
+                                <button class="btn-hp-style btn text-white">Contact Now</button>
                             </a>
                         </div>
                     </div>
