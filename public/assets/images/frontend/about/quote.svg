@@ -1,0 +1,8 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 43" width="60" height="43">
+	<title>quote-svg</title>
+	<style>
+		.s0 { fill: none;stroke: #0d6efd } 
+	</style>
+	<path id="Layer" fill-rule="evenodd" class="s0" d="m12.7 25h-12.2v-24.5h24.5v24.8l-8.3 16.6h-11.6l8.1-16.2 0.3-0.7z"/>
+	<path id="Layer" fill-rule="evenodd" class="s0" d="m46.7 25h-12.3v-24.5h24.5v24.8l-8.3 16.6h-11.6l8.1-16.2 0.4-0.7z"/>
+</svg>

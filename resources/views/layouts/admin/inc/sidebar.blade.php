@@ -1,43 +1,63 @@
- <!-- Vertical Navbar -->
- <nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg" id="navbarVertical">
-    <div class="container-fluid">
-        
-        <!-- Brand -->
-        <a class="navbar-brand py-lg-2  px-lg-6 me-0" href="/">
-            {{-- <img src="/digital_card_v2/assets/images/My_Digital_Card_Logo.png" alt="My Digital Card"> --}}
-            <h3 class="brand-name">My Digital Card</h3>
-        </a>
 
-    
-        <!-- Collapse -->
-        <div class="collapse navbar-collapse" id="sidebarCollapse">
-            <!-- Navigation -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin/dashboard">
-                        <i class="fa-solid fa-house"></i> Dashboard
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin/user">
-                        <i class="fa-solid fa-user"></i> User
-                    </a>
-                </li>
-                <li class="nav-item">
-                    
-                        <a class="nav-link" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        <i class="fa-solid fa-arrow-right-from-bracket"></i> {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                   
-                </li>
-               
-            </ul>
-        </div>
+<aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+      <img src="{{asset('assets/images/logo-ipsum1.png')}}" alt="Site Logo" class="site_logo"> 
     </div>
-</nav>
+    <ul class="sidebar-nav">
+      <li>
+        <a href="{{url('admin/dashboard')}}"><i class="fa fa-home"></i>Dashboard</a>
+      </li>
+      <li>
+        <a href="{{url('admin/user')}}"><i class="fa fa-user"></i>User</a>
+      </li>
+      {{-- <li>
+        <a href="post"><i class="fa fa-plug"></i>Post</a>
+        <ul class="drop-down-hp">
+          <li class="drop-down-item-hp"><a href="post"><i class="fa fa-plug"></i>All Post</a></li>
+          <li class="drop-down-item-hp"><a href="create-post"><i class="fa fa-plug"></i>Add Post</a></li>
+          <li class="drop-down-item-hp"><a href="category"><i class="fa fa-plug"></i>Categories</a></li>
+        </ul>
+      </li> --}}
+      {{-- <li>
+        <a href="pages"><i class="fa fa-user"></i>Pages</a>
+      </li> --}}
+      <li>
+        <a href="{{url('admin/solution')}}"><i class="fa fa-user"></i>Solution</a>
+      </li>
+      <li>
+        <a href="{{url('admin/solution')}}"><i class="fa fa-user"></i>Solution</a>
+      </li>
+      {{-- <li>
+        <a href="{{url('admin/settings')}}"><i class="fa fa-user"></i>Setting</a>
+      </li> --}}
+    </ul>
+  </aside>
+  
+
+  <div id="navbar-wrapper">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
+        </div>
+        <div class="admin_profile">
+          <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+            <img src="{{(!empty($row->profile_image)) ? url('assets/images/admin'.$row->profile_image): url('assets/images/avtar.jpg')}}" alt="avtar" class="avtar">
+          </button>
+          <div class="collapse hp_collap" id="dashboard-collapse">
+              <ul class="dropdown-avtar-ul">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Password Change</a></li>
+                <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                        @csrf
+                                                    </form></li>
+              </ul>
+          </div>
+      </div>
+      </div>
+    </nav>
+  </div>
+
+   

@@ -1,0 +1,28 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376 305" width="376" height="305">
+	<title>why-shape-1-1-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h376v305h-376z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m-98 0h605v291h-605z"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: #2f8adc } 
+		.s1 { fill: #000000 } 
+	</style>
+	<g id="Clip-Path" clip-path="url(#cp1)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp2)">
+				<g id="Layer">
+					<path id="Layer" class="s0" d="m5.2-137l-27.9 27.9 399 399.6 27.9-27.8z"/>
+					<path id="Layer" class="s0" d="m26-9l-1.6 1.6 264.7 265.2 1.6-1.6z"/>
+					<path id="Layer" class="s0" d="m242 13.1l-1.6 1.7 264.7 265.2 1.6-1.7z"/>
+					<path id="Layer" class="s1" d="m-96.3-105.6l-1.7 1.7 264.7 265.1 1.7-1.6z"/>
+					<path id="Layer" class="s1" d="m119.7-83.4l-1.7 1.6 264.7 265.2 1.7-1.7z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

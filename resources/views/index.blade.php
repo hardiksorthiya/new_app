@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 <body style=" background-color: var(--body-color)">
     <!-- navbar -->
@@ -22,8 +24,12 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#price">Pricing</a>
+                        <a class="nav-link" href="#feature">Feature</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plan">Plan</a>
+                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
@@ -67,11 +73,12 @@
     <!-- main body start -->
 
     <main id="home-page-digital-card">
-        <section class="top-banner-section margin-bottom-section">
+        <section class="top-banner-section margin-bottom-section" >
             <div class="container">
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-6 col-md-6 col-xl-6">
-                        <div class="image-section-top-home">
+                        <div class="image-section-top-home" data-aos="fade-up"
+                        data-aos-duration="3000">
                             <img src="assets/images/topone.png" alt="My Digital Card">
                         </div>
                         <div class="extra-decoration-image-left-side">
@@ -86,7 +93,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-xl-6">
-                        <div class="right-side-content-part">
+                        <div class="right-side-content-part" data-aos="fade-up"
+                        data-aos-duration="3000">
                             <div class="decorate-image-top-banner">
                                 <img class="decorate-one-image" src="assets/images/Exclude-2.png"
                                     alt="My Digital Card Member">
@@ -144,21 +152,23 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-5 col-md-5">
                         <div class="left-aboout-us ">
-                            <h2 class="heading-text-theme text-white margin-bottom-hp">
+                            <h2 class="heading-text-theme text-white margin-bottom-hp" >
                                 Designed From The Ground Up To Protect Privacy
                             </h2>
                             <h5 class="sub-heading-home margin-bottom-hp">Welcome to Digital Buisness Card, where we revolutionize the way you connect and network. Specializing in digital business cards, we offer a modern, eco-friendly solution that makes sharing your contact information effortless and impactful. <br><br>Our mission is to provide innovative, customizable, and interactive digital business cards that help professionals and businesses leave a lasting impression. With a focus on sustainability, convenience, and cutting-edge technology, we strive to enhance your networking experience in today's digital age. <br><br>Join us in embracing the future of professional connections and discover the power of digital business cards with Corpo Key.</h5>
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-7">
-                        <div class="image-right-about">
+                        <div class="image-right-about" data-aos="fade-left" data-aos-duration="3000"
+                        {{-- data-aos-offset="300" --}}
+                        data-aos-easing="ease-in-sine">
                             <img src="assets/images/about.png" alt="My Digital Card About">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="feature-section margin-bottom-section">
+        <section id="feature" class="feature-section margin-bottom-section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-xl-4">
@@ -272,7 +282,67 @@
                         <h2 class="heading-text-theme text-white margin-bottom-hp text-center">
                             Feture Themes
                         </h2>
-                        <div class="row feature-content-home">
+                        <div class="row ">
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="image-theme">
+                                    <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
+                                </div>
+                            </div>
                             <div class="col-lg-2">
                                 <div class="image-theme">
                                     <img src="{{asset('assets/images/IT-Developer.png')}}" alt="Theme 1">
@@ -311,7 +381,7 @@
                 <div class="background-feature"></div>
             </div>
         </section>
-        <section id="price" class="how-to-create margin-bottom-section">
+        <section id="plan" class="how-to-create margin-bottom-section">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
@@ -394,7 +464,11 @@
         </section>
     </main>
     <!-- footer -->
-    
+  
+        <script>
+  AOS.init();
+</script>
+   
     <footer>
         <section class="footer-area-hp">
             <div class="container">
@@ -422,19 +496,24 @@
                             <div class="menu-footer">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Home
+                                        <a class="nav-link" href="/">Home
                                             <span class="visually-hidden">(current)</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">About</a>
+                                        <a class="nav-link" href="#about">About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Pricing</a>
+                                        <a class="nav-link" href="#feature">Feature</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#plan">Plan</a>
+                                    </li>
+                                    
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Contact</a>
                                     </li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -458,11 +537,11 @@
                 </div>
                 <div class="footer-credit">
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-6">
                             <h5 class="sub-heading-home margin-bottom-hp">© 2024 My Digital Card. All Rights Reserved
                             </h5>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-6">
                             <div class="menu-footer credit-fotr">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
@@ -480,6 +559,10 @@
             </div>
         </section>
     </footer>
+
+    <a href="#top" id="scroll-to-top-btn">
+        <span>↑</span>
+      </a>
 
 
     <!-- script -->

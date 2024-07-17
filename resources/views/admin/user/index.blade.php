@@ -1,54 +1,55 @@
 @extends('layouts.admin.admin')
-
 @section('title', 'Users')
-
 @section('content')
-
-<div class="container table-responsive py-5"> 
-    <table id="myUserTable" class="table table-bordered table-hover">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">No.</th>
-          <th scope="col">Name</th>
-          <th scope="col">Email</th>
-          {{-- <th scope="col">Password</th> --}}
-          <th scope="col">Phone Number</th>
-          <th scope="col">Role</th>
-          <th scope="col">Last Update</th>
-          <th scope="col">Edit</th>
-          <th scope="col">Delete</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php 
-                $n = 1;
-                ?>
-        @foreach ($users as $item)
-        <tr>
-            
-            <th scope="row">{{$n}} 
-                <?php 
-                $n ++;
-                ?>
-            </th>
-            <td>{{$item->name}}</td>
-            <td>{{$item->email}}</td>
-            {{-- <td> {{$item->password}}</td> --}}
-            <td>{{$item->mobile}}</td>
-            <td>{{$item->role_as == '1' ? 'Admin':'User'}}</td>
-            <td>{{$item->updated_at}}</td>
-            <td><a href="{{url('admin/user/'.$item->id.'/edit')}}" class="btn btn-success">Edit</a></td>
-            <td><a href="{{url('admin/user/'.$item->id.'/delete')}}" class="btn btn-danger">Delete</a></td>
-            
-          </tr>
-          
-        @endforeach
-        
-        
-      </tbody>
-    </table>
-    </div>
-
-
+<div class="row">
+  <div class="col-lg-12">
+      <div class="heading-with-btn">
+          <h3 class="content-title">@yield('title')</h3><a href="user/add" class="hp-border-btn">Add New User</a>
+      </div>
+  </div>
+  
+  <div class="col-lg-12">
+      <div class="table-responsive py-4"> 
+          <table class="table table-hover hp-table-style">
+            <thead class="thead-dark">
+              <tr class="table-heading-text">
+                <th scope="col">Sr. No</th>
+                <th scope="col">Profile</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone No</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody class="table-body-hp">
+              <?php 
+              $n = 1;
+              ?>
+              @foreach ($users as $row)
+              <tr>
+                 
+                  <th scope="row">{{$n}} 
+                      <?php 
+                      $n ++;
+                      ?>
+                  </th>                            
+                  <td><img src="{{(!empty($row->image)) ? url('assets/images/admin/'.$row->image): url('assets/images/avtar.jpg')}}" alt="avtar" class="avtar"></td>
+                  <td>{{$row->name}}</td>
+                  <td>{{$row->email}}</td>
+                  <td>{{$row->mobile}}</td>
+                  <td><a href="{{url('admin/user/'.$row->id.'/edit')}}" class="hp-border-btn">Edit</a><a href="{{url('admin/user/'.$row->id.'/delete')}}" class="hp-border-btn">Delete</a></td>
+                 
+                </tr>
+              @endforeach
+              
+              
+              
+            </tbody>
+          </table>
+          </div>
+  </div>
+</div>
 @endsection
+  
+  
 
