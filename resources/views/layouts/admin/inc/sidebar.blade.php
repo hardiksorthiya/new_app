@@ -25,7 +25,7 @@
         <a href="{{url('admin/solution')}}"><i class="fa fa-user"></i>Solution</a>
       </li>
       <li>
-        <a href="{{url('admin/solution')}}"><i class="fa fa-user"></i>Solution</a>
+        <a href="{{url('admin/iconbox')}}"><i class="fa fa-user"></i>Icon Box</a>
       </li>
       {{-- <li>
         <a href="{{url('admin/settings')}}"><i class="fa fa-user"></i>Setting</a>

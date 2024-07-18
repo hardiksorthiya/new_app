@@ -2,6 +2,7 @@
 @section('title', 'Add New Page')
 @section('content')
     <script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="https://bsite.net/savrajdutta/cdn/multi-select.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <div class="row">
@@ -92,53 +93,19 @@
                                     </div>
 
                                     {{-- icon box section --}}
-                                    <div class="d-flex">
+                                    
                                         <div class="col-lg-12">
-                                            <div class="form-group">
+                                            <div class="form-group sd-multiSelect">
                                                 <label for="oneimage">Add icon Boxes</label></br>
-                                                {{-- <form method="post" action="submit.php"> --}}
-                                                <!-- Group of input fields -->
-                                                <div class="form-group fieldGroup">
-                                                    <div class="input-group mb-3">
-                                                        <input type="hidden" name="solutionpages_id">
-                                                        <input type="file" name="image_box" class="form-control" />
-                                                        <input type="text" name="box_text" class="form-control"
-                                                            placeholder="Box Title" />
-                                                        <input type="textarea" name="box_description" class="form-control"
-                                                            placeholder="Box Description" />
-                                                        <span class="input-group-text">
-                                                            <a href="javascript:void(0);" class="btn btn-success addMore"><i
-                                                                    class="custicon plus"></i> Add</a>
-                                                        </span>
-                                                    </div>
-                                                </div>
-
-                                                <!--Submit button -->
-                                                {{-- <input type="submit" name="submit" class="btn btn-primary" value="Submit"/> --}}
-                                                {{-- </form> --}}
-                                                <div class="form-group fieldGroupCopy" style="display: none;">
-                                                    <div class="input-group mb-3">
-                                                        <input type="text" name="first_name[]" class="form-control"
-                                                            placeholder="First Name" />
-                                                        <input type="text" name="last_name[]" class="form-control"
-                                                            placeholder="Last Name" />
-                                                        <input type="text" name="email[]" class="form-control"
-                                                            placeholder="Email address" />
-                                                        <span class="input-group-text">
-                                                            <a href="javascript:void(0)" class="btn btn-danger remove"><i
-                                                                    class="custicon cross"></i> Remove</a>
-                                                        </span>
-                                                    </div>
-                                                </div>
+                                                <select name="iconbox_id" multiple id="current-job-role" class="sd-CustomSelect">
+                                                    @foreach ($icon_box as $i)
+                                                        <option value="{{$i->box_text}}">{{$i->box_text}}</option>
+                                                    @endforeach
+                                                </select>
+                                               
                                             </div>
                                         </div>
-                                    </div>
-
-
-
-
-
-
+                                        
                                     {{-- second --}}
                                     <div class="col-lg-12">
                                         <div class="form-group">
@@ -160,6 +127,17 @@
                                             <label for="fullname">Second Description</label></br>
                                             <textarea id="summernotethree" name="descriptionsecond" class="input-field-hp edit-field-hp text-area-hp"></textarea>
 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group sd-multiSelect">
+                                            <label for="oneimage">Add icon Boxes</label></br>
+                                            <select name="icon_box_id" multiple id="current-job-role" class="sd-CustomSelect">
+                                                @foreach ($icon_box as $i)
+                                                    <option value="{{$i->box_text}}">{{$i->box_text}}</option>
+                                                @endforeach
+                                            </select>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -308,5 +286,14 @@
                 $(this).parents(".fieldGroup").remove();
             });
         });
+
+        $(document).ready(function() {
+                                          $(".sd-CustomSelect").multipleSelect({
+                                            selectAll: false,
+                                            onOptgroupClick: function(view) {
+                                              $(view).parents("label").addClass("selected-optgroup");
+                                            }
+                                          });
+                                        });
     </script>
 @endsection

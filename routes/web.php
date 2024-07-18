@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PagesController;
+use App\Http\Controllers\Admin\IconBoxController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BlogCategoryController;
@@ -100,6 +101,19 @@ Route::prefix('admin/')->group(function () {
     Route::get('solution/{page_id}/edit', [SolutionPagesController::class, 'edit']);
     Route::put('solution/{page_id}', [SolutionPagesController::class, 'update']);
     Route::post('solution/{page_id}/delete', [SolutionPagesController::class, 'delete']);
+
+    // iconbox
+    Route::get('iconbox', [IconBoxController::class, 'index']);
+    Route::get('iconbox/create', [IconBoxController::class, 'create']);
+    Route::post('iconbox', [IconBoxController::class, 'store']);
+    Route::get('iconbox/{page_id}/edit', [IconBoxController::class, 'edit']);
+    Route::put('iconbox/{page_id}', [IconBoxController::class, 'update']);
+    Route::post('iconbox/{page_id}/delete', [IconBoxController::class, 'delete']);
+
+
+
+
+
 
 
 

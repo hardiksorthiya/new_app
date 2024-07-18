@@ -53,19 +53,10 @@ class SolutionPageRequest extends FormRequest
                 'nullable',
                 'string'
             ],
-
-            'box_image' => [
+            'icon_box_id' =>[
                 'nullable',
-                'mimes:jpg,jpeg,png,svg,webp'
-            ],
-            'box_title' => [
-                'nullable',
-                
-            ],
-            'box_description' => [
-                'nullable',
-                
-            ],
+                'string'
+            ],          
 
             'descriptionsecond' => [
                 'nullable',

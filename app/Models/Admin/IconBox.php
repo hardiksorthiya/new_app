@@ -11,7 +11,7 @@ class IconBox extends Model
     protected $table = 'iconbox';
 
     protected $fillable = [
-        'solutionpages_id',
+       
         'box_image',
         'box_text',
         'box_description'

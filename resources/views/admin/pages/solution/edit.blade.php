@@ -2,6 +2,7 @@
 @section('title', 'Edit Page')
 @section('content')
 <script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
+<script src="https://bsite.net/savrajdutta/cdn/multi-select.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <div class="row">
@@ -99,6 +100,27 @@
                                             
                                         </div>
                                     </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group sd-multiSelect">
+                                            <label for="oneimage">Add icon Boxes</label></br>
+                                            <select name="iconbox_id" multiple id="current-job-role" class="sd-CustomSelect">
+                                                @foreach ($icon_box as $i)
+                                                    <option value="{{$i->id}}" {{$i->id == $page->i_id ? 'selected' : ''}}>
+                                                        {{$i->box_text}}
+                                                    </option>
+                                                @endforeach
+                                            </select>
+                                           
+                                        </div>
+                                    </div>
+                                    
+
+
+
+
+
+
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="PageTitleSecond">Second title</label></br>
@@ -241,6 +263,13 @@ $('.file-input').change(function(){
     $("#imageUpload").change(function() {
         readURL(this);
     });
-
+    $(document).ready(function() {
+                                          $(".sd-CustomSelect").multipleSelect({
+                                            selectAll: false,
+                                            onOptgroupClick: function(view) {
+                                              $(view).parents("label").addClass("selected-optgroup");
+                                            }
+                                          });
+                                        });
 </script>
 @endsection

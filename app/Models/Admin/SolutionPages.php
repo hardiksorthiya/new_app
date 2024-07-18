@@ -23,12 +23,15 @@ class SolutionPages extends Model
         'descriptionsecond',
         'meta_title',
         'meta_description',
-        'meta_keyword'
+        'meta_keyword',
+        'status',
+        'icon_box_id'
     ];
 
-    public function boxImages()
+    public function iconBox()
     {
-        return $this->hasMany(IconBox::class, 'solutionpages_id','id');
+        return this->hasMany(IconBox::class,'icon_box_id','id');
     }
-    use HasFactory;
+
+   
 }
