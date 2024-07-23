@@ -14,6 +14,7 @@ use App\Http\Controllers\Frontend\FrontendPageController;
 
 
 Route::get('/', function () {
+    return view('/frontend/index');
     $setting = DB::table('setting')->get();
     return view('/frontend/index',[
         'setting' => $setting     
@@ -95,7 +96,7 @@ Route::prefix('admin/')->group(function () {
 
     // SolutionPages
 
-    Route::get('solution', [SolutionPagesController::class, 'index']);
+    Route::get('solution', [SolutionPagesController::class, 'index'])->name('solutionback');
     Route::get('solution/create', [SolutionPagesController::class, 'create']);
     Route::post('solution', [SolutionPagesController::class, 'store']);
     Route::get('solution/{page_id}/edit', [SolutionPagesController::class, 'edit']);
@@ -112,8 +113,7 @@ Route::prefix('admin/')->group(function () {
 
 
 
-
-
+    
 
 
 

@@ -28,10 +28,9 @@ class SolutionPages extends Model
         'icon_box_id'
     ];
 
-    public function iconBox()
+    public function iconBoxes()
     {
-        return this->hasMany(IconBox::class,'icon_box_id','id');
+        return $this->hasMany(IconBox::class);
     }
-
    
 }
