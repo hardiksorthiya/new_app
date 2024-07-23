@@ -97,9 +97,9 @@
                                         <div class="col-lg-12">
                                             <div class="form-group sd-multiSelect">
                                                 <label for="oneimage">Add icon Boxes</label></br>
-                                                <select name="iconbox_id" multiple id="current-job-role" class="sd-CustomSelect">
+                                                <select name="iconbox_id[]" multiple id="current-job-role" class="sd-CustomSelect">
                                                     @foreach ($icon_box as $i)
-                                                        <option value="{{$i->box_text}}">{{$i->box_text}}</option>
+                                                        <option value="{{$i->id}}">{{$i->box_text}}</option>
                                                     @endforeach
                                                 </select>
                                                
@@ -129,7 +129,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
+                                    <!-- <div class="col-lg-12">
                                         <div class="form-group sd-multiSelect">
                                             <label for="oneimage">Add icon Boxes</label></br>
                                             <select name="icon_box_id" multiple id="current-job-role" class="sd-CustomSelect">
@@ -139,7 +139,7 @@
                                             </select>
                                            
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

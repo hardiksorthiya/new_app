@@ -62,11 +62,11 @@
                                                 <div class="avatar-upload inner-page-image one-image-page-sol">
                                                     <div class="imageWrapper">
                                                         <img class="image" src="{{'/assets/images/admin/'.$page->imageone}}">
-                                                        <button class="file-upload ">            
+                                                        <button class="file-upload ">
                                                             <input type="file"  value="{{$page->imageone}}" name="imageone" class="file-input">Choose File
                                                           </button>
                                                       </div>
-                                                      
+
                                                     <div class="size-suggation"><small>(size: 2000*20000 px)</small>
                                                     </div>
                                                 </div>
@@ -78,43 +78,51 @@
                                                 <div class="avatar-upload inner-page-image one-image-page-sol">
                                                     <div class="imageWrapper">
                                                         <img class="image2" src="{{'/assets/images/admin/'.$page->imagesecond}}">
-                                                        <button class="file-upload">            
+                                                        <button class="file-upload">
                                                             <input type="file" class="file-input2" value="{{$page->imagesecond}}" name="imagesecond" id="imageUpload2"
                                                             accept=".png, .jpg, .jpeg, .webp, .svg"  class="file-input">Choose File
                                                           </button>
                                                       </div>
-                                                      
+
                                                     <div class="size-suggation"><small>(size: 2000*20000 px)</small>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                       
+
                                     </div>
-                                    
+
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="descriptiontwo">Description Little</label></br>
                                             <textarea id="summernotetwo" name="descriptiontwo"
                                             class="input-field-hp edit-field-hp text-area-hp">{{$page->descriptiontwo}}</textarea>
-                                            
+
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12">
                                         <div class="form-group sd-multiSelect">
                                             <label for="oneimage">Add icon Boxes</label></br>
-                                            <select name="iconbox_id" multiple id="current-job-role" class="sd-CustomSelect">
-                                                @foreach ($icon_box as $i)
-                                                    <option value="{{$i->id}}" {{$i->id == $page->i_id ? 'selected' : ''}}>
+                                            <select name="iconbox_id[]" multiple id="current-job-role" class="sd-CustomSelect">
+                                               
+
+                                                @foreach($icon_box as $i)
+                                                @if(count($slected_iconbox)>0)
+                                                <option value="{{$i->id}}" {{ in_array($i->id, $slected_iconbox) ? "selected" : '' }}>
                                                         {{$i->box_text}}
                                                     </option>
+                                                    @else
+                                                    <option value="{{$i->id}}">
+                                                        {{$i->box_text}}
+                                                    </option>
+                                                    @endif
                                                 @endforeach
                                             </select>
-                                           
+
                                         </div>
                                     </div>
-                                    
+
 
 
 
@@ -134,7 +142,7 @@
                                             <label for="fullname">Second Description</label></br>
                                             <textarea id="summernotethree" name="descriptionsecond"
                                             class="input-field-hp edit-field-hp text-area-hp">{{$page->descriptionsecond}}</textarea>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -199,7 +207,7 @@
         </div>
     </div>
 
-    
+
 <script>
     $(document).ready(function() {
         $('#summernote').summernote({
