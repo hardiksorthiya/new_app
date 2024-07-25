@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-use App\Models\Admin\Setting;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\SettingRequest;
+use App\Models\Admin\Setting;
+use Illuminate\Http\Request;
 
 class SettingController extends Controller
 {
@@ -18,7 +18,7 @@ class SettingController extends Controller
     public function edit()
     {
         $setting = Setting::all();
-        return view('admin.setting.edit' , compact('setting'));
+        return view('admin.setting.edit', compact('setting'));
     }
     
     public function update(Request $request,$setting)

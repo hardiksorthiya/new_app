@@ -213,6 +213,7 @@
             </div>
         </div>
     </div>
+
     <div class="sticky-wrapper">
         <div class="menu-area">
             <div class="container-fluid">
@@ -222,6 +223,7 @@
                                     src="{{asset('assets/images/Netchwood-Finance-Logo-NEWwhite.png')}}"
                                     alt="Netchwood"></a></div>
                     </div>
+
                     <div class="col-auto me-xl-auto">
                         <nav class="main-menu d-none d-lg-inline-block">
                             <ul>
@@ -239,23 +241,17 @@
                                         <li><a href="service-details.html">Service Details</a></li>
                                     </ul>
                                 </li> --}}
-                                <li class="menu-item-has-children"><a href="#"> 
+                                <li class="menu-item-has-children"><a href="#">
                                     Insolvency Solutions</a>
                                     <ul class="sub-menu">
-                                        @php
                                         
-                                            $sol_page = App\Models\Admin\SolutionPages::where('status','0')->get();
-                                        @endphp
-                                        @foreach ($sol_page as $item)
-                                            <li><a href="{{$item->slug}}">{{$item->name}}</a></li>
-                                        @endforeach
-                                        {{-- <li><a href="{{url('administration')}}">Administration</a></li>
+                                        <li><a href="{{url('administration')}}">Administration</a></li>
                                         <li><a href="#">Insolvent Liquidation</a></li>
                                         <li><a href="#">Solvent Liquidation</a></li>
                                         <li><a href="#">Receivership</a></li>
                                         <li><a href="#">Company Voluntary Arrangement</a></li>
                                         <li><a href="#">Individual Voluntary Arrangement (IVA)</a></li>
-                                        <li><a href="#">Pre Pack</a></li> --}}
+                                        <li><a href="#">Pre Pack</a></li>
                                         
                                     </ul>
                                 </li>
@@ -275,7 +271,7 @@
                     </div>
                     <div class="col-auto d-none d-xl-block">
                         <div class="header-button">
-                            
+
                             <div class="d-xxl-block d-none"><a href="contact.html" class="th-btn">Get a Free Consultation<span class="icon"><i
                                             class="fa-solid fa-arrow-up-right ms-3"></i></span></a></div>
                         </div>
@@ -286,5 +282,3 @@
         </div>
     </div>
 </header>
-
-    
