@@ -1,3 +1,6 @@
+
+
+
 <div class="preloader"><button class="th-btn preloaderCls">Cancel Preloader</button>
     <div class="preloader-inner"><span class="loader"></span></div>
 </div>
@@ -239,14 +242,20 @@
                                 <li class="menu-item-has-children"><a href="#"> 
                                     Insolvency Solutions</a>
                                     <ul class="sub-menu">
+                                        @php
                                         
-                                        <li><a href="{{url('administration')}}">Administration</a></li>
+                                            $sol_page = App\Models\Admin\SolutionPages::where('status','0')->get();
+                                        @endphp
+                                        @foreach ($sol_page as $item)
+                                            <li><a href="{{$item->slug}}">{{$item->name}}</a></li>
+                                        @endforeach
+                                        {{-- <li><a href="{{url('administration')}}">Administration</a></li>
                                         <li><a href="#">Insolvent Liquidation</a></li>
                                         <li><a href="#">Solvent Liquidation</a></li>
                                         <li><a href="#">Receivership</a></li>
                                         <li><a href="#">Company Voluntary Arrangement</a></li>
                                         <li><a href="#">Individual Voluntary Arrangement (IVA)</a></li>
-                                        <li><a href="#">Pre Pack</a></li>
+                                        <li><a href="#">Pre Pack</a></li> --}}
                                         
                                     </ul>
                                 </li>

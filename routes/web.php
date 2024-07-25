@@ -28,9 +28,11 @@ Route::get('/frontend/index', [HomeController::class, 'index'])->name('home');
 
 // frontend
 
-Route::get('/administration', [FrontendPageController::class, 'administration'])->name('Administration');
+// Route::get('/administration', [FrontendPageController::class, 'administration'])->name('Administration');
 Route::get('/about-us', [FrontendPageController::class, 'about'])->name('About Us');
 Route::get('/contact-us', [FrontendPageController::class, 'contact'])->name('Contact Us');
+Route::get('/{solution_slug}', [FrontendPageController::class, 'solution_slug'])->name('solution Pages');
+
 
 
 

@@ -620,7 +620,9 @@ a.extra-fields-customer {
     background: var(--hp-primary-color);
     border-width: 0 2px 2px 0;
   }
-
+  .ms-drop.bottom ul {
+    overflow: overlay;
+}
 
 
 

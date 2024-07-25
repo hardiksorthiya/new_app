@@ -129,5 +129,5 @@
         </path>
     </svg></div>
     <script src="{{ asset('assets/js/frontend/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('assets/js/frontend/app.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/frontend/app.min.js') }}"></script> --}}
     <script src="{{ asset('assets/js/frontend/main.js') }}"></script> 
