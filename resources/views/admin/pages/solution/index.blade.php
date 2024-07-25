@@ -38,7 +38,7 @@
                                 <td>{{ $row->name }}</td>
                                 <td>{{ $row->slug }}</td>
                                 <td><a href="{{ url('admin/solution/' . $row->id . '/edit') }}" class="hp-border-btn">Edit</a>
-                                  <a href="#" class="hp-border-btn" data-bs-toggle="modal" data-bs-target="#deletePage">Delete</a></td>
+                                  {{-- <a href="#" class="hp-border-btn" data-bs-toggle="modal" data-bs-target="#deletePage">Delete</a></td> --}}
 
                             </tr>
                             <div class="modal fade" id="deletePage" tabindex="-1" aria-labelledby="deletePageLabel" aria-hidden="true">

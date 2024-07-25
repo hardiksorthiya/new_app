@@ -12,12 +12,13 @@ use App\Http\Requests\Admin\PageRequest;
 
 class FrontendPageController extends Controller
 {
-    public function administration($icon_box_id)
-    {
-        $page = Pages::all(); 
-        $icon_box = IconBox::find($icon_box_id);      
-        return view('frontend.solution.administration',compact('page','icon_box'));
-    }
+
+
+    // public function administration()
+    // {
+       
+    //     return view('frontend.solution.administration', compact('page'));
+    // }
     public function about()
     {
         return view('frontend.about');
@@ -26,13 +27,17 @@ class FrontendPageController extends Controller
     {
         return view('frontend.contact');
     }
+
     public function solution_slug(string $solution_slug)
     {   
         $sol_page = SolutionPages::where('slug',$solution_slug)->where('status','0')->first();
+        
         if($sol_page)
         {
-            $icon_box = IconBox::get();
-            return view('frontend.solution.administration', compact('sol_page','icon_box'));
+            
+         
+            // $icon_box = IconBox::where('id',$solutionPage)->get();
+            return view('frontend.solution.administration', compact('sol_page'));
         }
         else
         {

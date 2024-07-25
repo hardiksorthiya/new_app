@@ -35,7 +35,9 @@
                                         alt="img"></div>
                             </div>
                             <div class="mb-30 mt-2">{!! $sol_page->descriptiontwo !!}</div>
-                            {{-- <div class="row gy-30 gx-30 justify-content-center">
+
+                            
+                            <div class="row gy-30 gx-30 justify-content-center">
                                 <div class="col-xl-4 col-lg-12 col-md-4 d-flex align-items-stretch">
                                     <div class="service-card">
                                         <div class="box-img"><img
@@ -54,15 +56,15 @@
                                                     ?></span></div>
                                         </div>
                                         <div class="box-content">
-                                            @foreach ($icon_box as $sol_page)
-                                                <p class="box-text">{{$sol_page->box_description}}</p>
-                                            @endforeach
+                                            
+                                                {{-- <p class="box-text">{{$sol_page->iconbox->box_description}}</p> --}}
+                                            
 
                                         </div>
                                     </div>
                                 </div>
                                
-                            </div> --}}
+                            </div>
                             
 
                             <h3 class="sec-title page-title mt-35">{{ $sol_page->titletextsecond }}</h3>
