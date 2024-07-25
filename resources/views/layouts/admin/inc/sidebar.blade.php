@@ -27,9 +27,9 @@
       <li>
         <a href="{{url('admin/iconbox')}}"><i class="fa fa-user"></i>Icon Box</a>
       </li>
-      {{-- <li>
+      <li>
         <a href="{{url('admin/settings')}}"><i class="fa fa-user"></i>Setting</a>
-      </li>  --}}
+      </li> 
     </ul>
   </aside>
   
