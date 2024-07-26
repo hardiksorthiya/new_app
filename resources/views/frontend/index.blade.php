@@ -6,7 +6,79 @@
     </div>
     {{-- menu --}}
     @include('frontend.inc.header')
-    <div class="th-hero-wrapper hero-1" id="hero">
+    
+    <div class="th-hero-wrapper hero-3" id="hero">
+        <div class="swiper th-slider" id="heroSlider3" data-slider-options='{"effect":"fade"}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-bg-src="{{ asset('assets/images/frontend/home/hero_bg_3_1.jpg') }}" data-overlay="black"
+                    data-opacity="9">
+                    <div class="hero-inner">
+                        <div class="container">
+                            <div class="hero-style3"><span class="sub-title" data-ani="slideinup"
+                                    data-ani-delay="0.2s">Professional Liquidation</span>
+                                <h1 class="hero-title"><span class="title1" data-ani="slideinup"
+                                        data-ani-delay="0.4s">End Creditor</span> <span class="title2"
+                                        data-ani="slideinup" data-ani-delay="0.5s">Pressure and Move Forward</span></h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Expert Liquidation Services to Relieve Your Business from
+                                    Creditor Pressure</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s"><a
+                                        href="contact.html" class="th-btn style3">GET START<div class="icon"><i
+                                                class="fa-solid fa-arrow-up-right ms-3"></i></div></a></div>
+                            </div>
+                        </div>
+                        <div class="hero-img"><img src="{{ asset('assets/images/frontend/home/hero_3_1.png') }}" alt="Image"></div>
+                        <div class="hero-shape1 bg-theme" data-bg-src="{{ asset('assets/images/frontend/home/hero_bg_shape3_1.jpg') }}"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_3_2.jpg" data-overlay="black"
+                    data-opacity="9">
+                    <div class="hero-inner">
+                        <div class="container">
+                            <div class="hero-style3"><span class="sub-title" data-ani="slideinup"
+                                    data-ani-delay="0.2s">MARKET ANALYSIS PRO</span>
+                                <h1 class="hero-title"><span class="title1" data-ani="slideinup"
+                                        data-ani-delay="0.4s">Nexus Connect</span> <span class="title2"
+                                        data-ani="slideinup" data-ani-delay="0.5s">Consultancy</span></h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">A business
+                                    consulting company provides expert advice and achieve solutions to businesses help
+                                    them improve their performance</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s"><a
+                                        href="contact.html" class="th-btn style3">GET START<div class="icon"><i
+                                                class="fa-solid fa-arrow-up-right ms-3"></i></div></a></div>
+                            </div>
+                        </div>
+                        <div class="hero-img"><img src="assets/img/hero/hero_3_2.png" alt="Image"></div>
+                        <div class="hero-shape1 bg-theme" data-bg-src="assets/img/hero/hero_bg_shape3_1.jpg"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_3_3.jpg" data-overlay="black"
+                
+                    data-opacity="9">
+                    <div class="hero-inner">
+                        <div class="container">
+                            <div class="hero-style3"><span class="sub-title" data-ani="slideinup"
+                                    data-ani-delay="0.2s">SALES ACCELERATION PRO</span>
+                                <h1 class="hero-title"><span class="title1" data-ani="slideinup"
+                                        data-ani-delay="0.4s">Turning Dreams</span> <span class="title2"
+                                        data-ani="slideinup" data-ani-delay="0.5s">Into Profits</span></h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">A business
+                                    consulting company provides expert advice and achieve solutions to businesses help
+                                    them improve their performance</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s"><a
+                                        href="contact.html" class="th-btn style3">GET START<div class="icon"><i
+                                                class="fa-solid fa-arrow-up-right ms-3"></i></div></a></div>
+                            </div>
+                        </div>
+                        <div class="hero-img"><img src="assets/img/hero/hero_3_3.png" alt="Image"></div>
+                        <div class="hero-shape1 bg-theme" data-bg-src="assets/img/hero/hero_bg_shape3_1.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-pagination"></div>
+        </div>
+    </div>
+   
+    {{-- <div class="th-hero-wrapper hero-1" id="hero">
         <div class="th-hero-bg" data-bg-src="{{ asset('assets/images/frontend/home/hero_bg_1_1.jpg') }}"><img
                 src="{{ asset('assets/images/frontend/home/hero_bg_ovarlay1_1.jpg') }}" alt="img"></div>
         <div class="th-hero-shape hero-tweenmax"
@@ -28,18 +100,18 @@
                             Creditor Pressure</p>
                         <div class="btn-wrap"><a href="#" class="th-btn style3">Get a Free Consultation<div
                                     class="icon"><i class="fa-solid fa-arrow-up-right ms-3"></i></div></a>
-                            {{-- <a
+                            <a
                                 href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="style-video popup-video">
-                                <div class="play-btn"><i class="fas fa-play"></i></div> --}}
-                            {{-- <div class="btn-content">
+                                <div class="play-btn"><i class="fas fa-play"></i></div>
+                            <div class="btn-content">
                                     <p class="btn-title">Watch The Video</p>
-                                </div> --}}
+                                </div>
                             </a></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="overflow-hidden space-top" id="about-sec">
         <div class="container">
             <div class="row align-items-center">
@@ -894,40 +966,11 @@
             </div>
         </div>
     </section> --}}
-    
+
 
     @include('frontend.inc.footer')
 </body>
 
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  

@@ -11,20 +11,28 @@ class SettingController extends Controller
 {
     public function index()
     {
-        return view('admin.setting.index');
+        $setting = Setting::all();
+        return view('admin.setting.index', compact('setting'));
     }
-    public function create()
-    {
-        return view('admin.setting.create');
-    }
+  
     public function edit()
     {
         $setting = Setting::all();
         return view('admin.setting.edit', compact('setting'));
     }
-    public function store(SettingRequest $request)
-    {
-        $setting = new Setting;
+    
+    public function update(SettingRequest $request)
+    {     
+        $data = $request->validated();
+        $setting = Setting::all();
+        $setting->phone = $data['phone'];
+        $setting->email = $data['email'];
+        $setting->address = $data['address'];
+        $setting->facebook = $data['facebook'];
+        $setting->instagram = $data['instagram'];
+        $setting->youtube = $data['youtube'];
+        $setting->linkedin = $data['linkedin'];
+       
 
         if ($request->hasfile('logo')) {
             $file = $request->file('logo');
@@ -32,37 +40,19 @@ class SettingController extends Controller
             $filename = time() . '.' . $extension;
             $path = 'assets/images/admin/';
             $file->move($path, $filename);
-            $setting->image = $filename;
+            $setting->logo = $filename;
         }
-
-        $setting->favicon = $request->favicon;
-        $setting->instagram = $request->instagram;
-        $setting->youtube = $request->youtube;
-        $setting->linkedin = $request->linkedin;
-        $user->save();
-
-        return redirect('admin/settings')->with('success', 'Updated Successfully.');
-
-    }
-    public function update(Request $request, $setting_id)
-    {
-
-        $setting = Setting::find($setting_id);
-
-        if ($request->hasfile('logo')) {
-            $file = $request->file('logo');
+        if ($request->hasfile('fevicon')) {
+            $file = $request->file('fevicon');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
             $path = 'assets/images/admin/';
             $file->move($path, $filename);
-            $setting->image = $filename;
+            $setting->fevicon = $filename;
         }
-        $setting->favicon = $request->favicon;
-        $setting->instagram = $request->instagram;
-        $setting->youtube = $request->youtube;
-        $setting->linkedin = $request->linkedin;
-        $user->update();
-
+        
+        $setting->update();   
+ 
         return redirect('admin/settings')->with('success', 'Updated Successfully.');
 
     }

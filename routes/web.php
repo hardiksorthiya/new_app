@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PagesController;
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\IconBoxController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -28,9 +29,11 @@ Route::get('/frontend/index', [HomeController::class, 'index'])->name('home');
 
 // frontend
 
-Route::get('/administration', [FrontendPageController::class, 'administration'])->name('Administration');
+// Route::get('/administration', [FrontendPageController::class, 'administration'])->name('Administration');
 Route::get('/about-us', [FrontendPageController::class, 'about'])->name('About Us');
 Route::get('/contact-us', [FrontendPageController::class, 'contact'])->name('Contact Us');
+Route::get('/{solution_slug}', [FrontendPageController::class, 'solution_slug'])->name('solution Pages');
+
 
 
 
@@ -82,7 +85,7 @@ Route::prefix('admin/')->group(function () {
     Route::get('create-setting', [SettingController::class, 'create']);
     Route::get('edit-setting', [SettingController::class, 'edit']);
     Route::post('setting/create', [SettingController::class, 'store']);
-    Route::put('edit-setting', [PagesController::class, 'update']);
+    Route::put('edit-setting', [SettingController::class, 'update']);
 
 
     // pages
@@ -110,6 +113,15 @@ Route::prefix('admin/')->group(function () {
     Route::get('iconbox/{page_id}/edit', [IconBoxController::class, 'edit']);
     Route::put('iconbox/{page_id}', [IconBoxController::class, 'update']);
     Route::post('iconbox/{page_id}/delete', [IconBoxController::class, 'delete']);
+
+    // banner
+
+    Route::get('banner', [BannerController::class, 'index']);
+    Route::get('banner/create', [IconBoxController::class, 'create']);
+    Route::post('banner', [IconBoxController::class, 'store']);
+
+
+
 
 
 

@@ -4,10 +4,10 @@
       <img src="{{asset('assets/images/logo-ipsum1.png')}}" alt="Site Logo" class="site_logo"> 
     </div>
     <ul class="sidebar-nav">
-      <li>
+      <li class="{{Request::is('admin/dashboard') ? 'active':''}}">
         <a href="{{url('admin/dashboard')}}"><i class="fa fa-home"></i>Dashboard</a>
       </li>
-      <li>
+      <li class="{{Request::is('admin/user') ? 'active':''}}">
         <a href="{{url('admin/user')}}"><i class="fa fa-user"></i>User</a>
       </li>
       {{-- <li>
@@ -21,14 +21,17 @@
       {{-- <li>
         <a href="pages"><i class="fa fa-user"></i>Pages</a>
       </li> --}}
-      <li>
+      <li class="{{Request::is('admin/solution') ? 'active':''}}">
         <a href="{{url('admin/solution')}}"><i class="fa fa-user"></i>Solution</a>
       </li>
-      <li>
+      <li class="{{Request::is('admin/iconbox') ? 'active':''}}">
         <a href="{{url('admin/iconbox')}}"><i class="fa fa-user"></i>Icon Box</a>
       </li>
-      <li>
+       <li>
         <a href="{{url('admin/settings')}}"><i class="fa fa-user"></i>Setting</a>
+      </li> 
+      <li>
+        <a href="{{url('admin/banner')}}"><i class="fa fa-user"></i>Banner</a>
       </li> 
     </ul>
   </aside>

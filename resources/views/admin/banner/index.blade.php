@@ -1,11 +1,11 @@
 @extends('layouts.admin.admin')
-@section('title', 'Solution Pages')
+@section('title', 'Banner')
 @section('content')
     <div class="row">
         <div class="col-lg-12">
             <div class="heading-with-btn">
                 <h3 class="content-title">@yield('title')</h3><a href="{{ url('admin/solution/create') }}"
-                    class="hp-border-btn">Add New Page</a>
+                    class="hp-border-btn">Add Banner</a>
             </div>
         </div>
         @if (session('message'))
@@ -18,8 +18,9 @@
                     <thead class="thead-dark">
                         <tr class="table-heading-text">
                             <th scope="col">Sr. No</th>
-                            <th scope="col">Page Name</th>
-                            <th scope="col">Slug</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -27,7 +28,7 @@
                         <?php
                         $n = 1;
                         ?>
-                        @foreach ($page as $row)
+                        @foreach ($banner as $row)
                             <tr>
 
                                 <th scope="row">{{ $n }}
@@ -35,8 +36,9 @@
                                     $n++;
                                     ?>
                                 </th>
-                                <td>{{ $row->name }}</td>
-                                <td>{{ $row->slug }}</td>
+                                <td>{{ $row->main_image }}</td>
+                                <td>{{ $row->title }}</td>
+                                <td>{{ $row->description }}</td>
                                 <td><a href="{{ url('admin/solution/' . $row->id . '/edit') }}" class="hp-border-btn">Edit</a>
                                   {{-- <a href="#" class="hp-border-btn" data-bs-toggle="modal" data-bs-target="#deletePage">Delete</a></td> --}}
 

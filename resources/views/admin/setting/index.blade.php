@@ -1,47 +1,91 @@
+@extends('layouts.admin.admin')
+@section('title', 'Settings')
+@section('content')
+    <div class="row">
 
-<script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-<div id="wrapper">
-    @extends('layouts.admin.admin')
-    @section('title', 'Settings')
-    @include('layouts.admin.inc.sidebar')
-    
-    <section id="content-wrapper">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="heading-with-btn">
-                    <h3 class="content-title">Settings</h3>
-                </div>
-            </div>
-                @if ($errors->any())
-                @foreach ($errors->all() as $error)
-                    <div>{{$error}}</div>
-                @endforeach
-                @endif
-        </div>
-        <form action="{{url('admin/settings')}}" method="POST" enctype="multipart/form-data">
-            @csrf
-            @method('PUT')
-            @if ($errors->any())
+        @if ($errors->any())
             @foreach ($errors->all() as $error)
-                <div>{{$error}}</div>
+                <div>{{ $error }}</div>
             @endforeach
-            @endif
-            <div class="container">
+        @endif
+
+        <div class="col-lg-12">
+            <div class="heading-with-btn">
+                <h3 class="content-title">@yield('title')</h3><a href="edit-setting" class="hp-border-btn">Edit Page</a>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="section-ineer-main">
+
                 <div class="row">
-                    <div class="col">
-                        <img src="{{(!empty($row->logo)) ? url('assets/images/admin/'.$row->logo): url('assets/images/avtar.jpg')}}" alt="avtar" class="avtar">
-                        <input type="file" name="logo">
+                    <div class="col-lg-3">
+                        <div class="profile-section-edit py-4">
+                            <div class="image-section-profile">
+                                <img src="{{ !empty($setting->logo) ? url('assets/images/admin/' . $setting->logo) : url('assets/images/avtar.jpg') }}"
+                                    alt="Avtar">
+                                <label class="filelabel">
+                                    <i class="fa fa-paperclip">
+                                    </i>
+                                    <span class="title">
+                                        Change Logo
+                                    </span>
+                                    <input class="FileUpload1" id="FileInput" name="image" type="file" />
+                                </label>
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-lg-3">
+                        <div class="profile-section-edit py-4">
+                            <div class="image-section-profile">
+                                <img src="{{ !empty($setting->logo) ? url('assets/images/admin/' . $setting->logo) : url('assets/images/avtar.jpg') }}"
+                                    alt="Avtar">
+                                <label class="filelabel">
+                                    <i class="fa fa-paperclip">
+                                    </i>
+                                    <span class="title">
+                                        Change Fevicon
+                                    </span>
+                                    <input class="FileUpload1" id="FileInput" name="image" type="file" />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row edit-form">
+                            <div class="col-lg-12">
+                                <label for="fullname">Phone Number</label></br>
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="fullname">Email</label></br>
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="fullname">Address</label></br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <hr>
+                        <div class="row edit-form">
+                            <div class="col-lg-12">
+                                <h4>Social Media</h4>
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="fullname">Favebook</label></br>
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="fullname">Instagram</label></br>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    </form>
                 </div>
             </div>
-            <div class="buttton-hp">
-                <button type="submit">Update</button>
-            </div>
+        </div>
+
         </form>
-    </section>
-</div>
 
-
-
+    </div>
+@endsection

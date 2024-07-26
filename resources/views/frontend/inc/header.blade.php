@@ -1,3 +1,6 @@
+
+
+
 <div class="preloader"><button class="th-btn preloaderCls">Cancel Preloader</button>
     <div class="preloader-inner"><span class="loader"></span></div>
 </div>
@@ -241,10 +244,15 @@
                                 <li class="menu-item-has-children"><a href="#">
                                     Insolvency Solutions</a>
                                     <ul class="sub-menu">
-                                        @foreach(checkAuthenticationType() as $data)
-                                            <li><a href="{{url($data->slug)}}">{{$data->name}}</a></li>
-                                        @endforeach
 
+                                        @php
+                                        
+                                            $sol_page = App\Models\Admin\SolutionPages::where('status','0')->get();
+                                        @endphp
+                                        @foreach ($sol_page as $item)
+                                            <li><a href="{{$item->slug}}">{{$item->name}}</a></li>
+                                        @endforeach
+              
                                     </ul>
                                 </li>
                                 {{-- <li class="menu-item-has-children"><a href="#">News</a>
