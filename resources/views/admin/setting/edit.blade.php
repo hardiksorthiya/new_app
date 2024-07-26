@@ -65,17 +65,17 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label for="phonenumber">Phone Number</label></br>
-                                    <input type="tel" name="phone" placeholder="{{$setting->facebook}}" value="{{$setting->facebook}}"  class="input-field-hp edit-field-hp">
+                                    <input type="tel" name="phone" placeholder="{{$setting[0]->phone}}" value="{{$setting[0]->phone}}"  class="input-field-hp edit-field-hp">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="phonenumber">Email</label></br>
-                                    <input type="email" name="email" placeholder="" value=""  class="input-field-hp edit-field-hp">
+                                    <input type="email" name="email" placeholder="{{$setting[0]->email}}" value="{{$setting[0]->email}}"  class="input-field-hp edit-field-hp">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="phonenumber">Address</label></br>
-                                    <textarea name="address" rows="3"  class="input-field-hp edit-field-hp"></textarea>
+                                    <textarea name="address" rows="3"  class="input-field-hp edit-field-hp">{{$setting[0]->address}}</textarea>
                                 </div>
                             </div>
 
@@ -84,19 +84,23 @@
                                 <h4>Social Media</h4>
                                 <div class="form-group">
                                     <label for="facebook">Facebook</label></br>
-                                    <input type="text" name="facebook" value=""  class="input-field-hp edit-field-hp">
+                                    <input type="text" name="facebook" value="{{$setting[0]->facebook}}"  class="input-field-hp edit-field-hp">
                                 </div>
                                 <div class="form-group">
                                     <label for="Instagram">Instagram</label></br>
-                                    <input type="text" name="instagram" value=""  class="input-field-hp edit-field-hp">
+                                    <input type="text" name="instagram" value="{{$setting[0]->instagram}}"  class="input-field-hp edit-field-hp">
                                 </div>
                                 <div class="form-group">
                                     <label for="Twitter">Twitter</label></br>
-                                    <input type="text" name="twitter" value=""  class="input-field-hp edit-field-hp">
+                                    <input type="text" name="twitter" value="{{$setting[0]->twitter}}"  class="input-field-hp edit-field-hp">
                                 </div>
                                 <div class="form-group">
                                     <label for="youtube">Youtube</label></br>
-                                    <input type="text" name="youtube" value=""  class="input-field-hp edit-field-hp">
+                                    <input type="text" name="youtube" value="{{$setting[0]->youtube}}"  class="input-field-hp edit-field-hp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="linkedin">Linkedin</label></br>
+                                    <input type="text" name="linkedin" value="{{$setting[0]->linkedin}}"  class="input-field-hp edit-field-hp">
                                 </div>
 
                                 

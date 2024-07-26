@@ -13,12 +13,6 @@ use App\Http\Requests\Admin\PageRequest;
 class FrontendPageController extends Controller
 {
 
-
-    // public function administration()
-    // {
-       
-    //     return view('frontend.solution.administration', compact('page'));
-    // }
     public function about()
     {
         return view('frontend.about');
@@ -34,9 +28,6 @@ class FrontendPageController extends Controller
         
         if($sol_page)
         {
-            
-         
-            // $icon_box = IconBox::where('id',$solutionPage)->get();
             return view('frontend.solution.administration', compact('sol_page'));
         }
         else

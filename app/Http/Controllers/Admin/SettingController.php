@@ -21,17 +21,17 @@ class SettingController extends Controller
         return view('admin.setting.edit', compact('setting'));
     }
     
-    public function update(Request $request,$setting)
+    public function update(SettingRequest $request)
     {     
-        $setting = $request->validated();
-        $setting = Setting::findOrFail($setting);
-        $page->phone = $data['phone'];
-        $page->email = $data['email'];
-        $page->address = $data['address'];
-        $page->facebook = $data['facebook'];
-        $page->instagram = $data['instagram'];
-        $page->youtube = $data['youtube'];
-        $page->linkedin = $data['linkedin'];
+        $data = $request->validated();
+        $setting = Setting::all();
+        $setting->phone = $data['phone'];
+        $setting->email = $data['email'];
+        $setting->address = $data['address'];
+        $setting->facebook = $data['facebook'];
+        $setting->instagram = $data['instagram'];
+        $setting->youtube = $data['youtube'];
+        $setting->linkedin = $data['linkedin'];
        
 
         if ($request->hasfile('logo')) {
@@ -40,7 +40,7 @@ class SettingController extends Controller
             $filename = time() . '.' . $extension;
             $path = 'assets/images/admin/';
             $file->move($path, $filename);
-            $page->logo = $filename;
+            $setting->logo = $filename;
         }
         if ($request->hasfile('fevicon')) {
             $file = $request->file('fevicon');
@@ -48,12 +48,12 @@ class SettingController extends Controller
             $filename = time() . '.' . $extension;
             $path = 'assets/images/admin/';
             $file->move($path, $filename);
-            $page->fevicon = $filename;
+            $setting->fevicon = $filename;
         }
         
-        $page->update();   
+        $setting->update();   
  
-        return redirect('admin/settings')->compact('setting')->with('success', 'Updated Successfully.');
+        return redirect('admin/settings')->with('success', 'Updated Successfully.');
 
     }
 }
