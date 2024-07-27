@@ -57,13 +57,7 @@ $n++;
 ?>
                                                 </span></div>
                                         </div>
-                                        <div class="box-content">
-                                            @if(count($iconboxData) > 0)
-                                            @foreach($iconboxData as $iconbox)
-                                            <p class="box-text">{{$iconbox['box_description']}}</p>
-                                            @endforeach
-                                            @endif
-                                        </div>
+
                                     </div>
                                 </div>
 
@@ -158,7 +152,15 @@ $n++;
                                         class="fa-solid fa-arrow-up-right ms-3"></i></span></a></div>
                     </div>
                 </div>
-
+                <div class="box-content">
+                                            @if(count($iconboxData) > 0)
+                                            @foreach($iconboxData as $iconbox)
+                                            <img src="{{asset('uploads/icon/'. $iconbox['box_image'])}}" alt="iconbox">
+                                            <p class="box-text">{{$iconbox['box_text']}}</p>
+                                            <p class="box-text">{{$iconbox['box_description']}}</p>
+                                            @endforeach
+                                            @endif
+                                        </div>
                 <div>
                     <h3>FAQ's</h3>
                 </div>
