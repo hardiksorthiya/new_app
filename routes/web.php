@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\SolutionPagesController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Frontend\FrontendPageController;
 
 
@@ -125,7 +126,11 @@ Route::prefix('admin/')->group(function () {
 
 
 
-
+    Route::get('faq', [FaqController::class, 'index']);
+    Route::get('create-faq', [FaqController::class, 'create']);
+    Route::get('edit-faq/{name}/{id}', [FaqController::class, 'edit']);
+    Route::post('faq/create', [FaqController::class, 'store']);
+    Route::put('edit-faq/{s_id}', [FaqController::class, 'update']);
 
 
 

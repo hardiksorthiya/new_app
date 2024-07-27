@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Admin\Pages;
+use App\Models\Admin\Faq;
+
 use Illuminate\Http\Request;
 use App\Models\Admin\IconBox;
 use Illuminate\Support\Facades\DB;
@@ -28,7 +30,18 @@ class FrontendPageController extends Controller
         
         if($sol_page)
         {
-            return view('frontend.solution.administration', compact('sol_page'));
+            $solution_pages = DB::table('icon_box_solution_page')->where('solution_page_id',$sol_page->id)->get()->pluck('icon_box_id')->toarray();
+            $iconbox = IconBox::whereIn('id', $solution_pages)->get();
+            $faq = Faq::where('solution_page_id', $sol_page->id)->get();
+
+            $iconboxData = $iconbox->map(function ($item) {
+                return $item->only(['id', 'box_image', 'box_text', 'box_description']);
+            })->toArray();
+
+            // dd($iconboxData);
+            // print_r($iconbox[0]);
+            // die;
+            return view('frontend.solution.administration', compact('sol_page', 'iconboxData', 'faq'));
         }
         else
         {
