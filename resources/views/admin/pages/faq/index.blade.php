@@ -37,32 +37,7 @@
                                 <td>{{ $row->name }}</td>
                                 <td><a href="{{ url('admin/edit-faq/' .$row->name.'/'. $row->id) }}" class="hp-border-btn">Edit</a>
                             </tr>
-                            <!-- <div class="modal fade" id="deletePage" tabindex="-1" aria-labelledby="deletePageLabel" aria-hidden="true">
-                              <div class="modal-dialog">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="deletePageLabel">Delete Page</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                  </div>
-                                  <form action="{{url('admin/iconbox/' . $row->id . '/delete')}}" method="POST">
-                                    @csrf
-                                    <div class="modal-body">
-                                      <input type="hidden" name="id">
-                                      Are you sure you want to delete this page?
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="submit" class="btn btn-primary">Delete</button>
-                                    </div>
-                                  </form>
-                                  
-                                </div>
-                              </div>
-                            </div> -->
                         @endforeach
-
-
-
                     </tbody>
                    
                 </table>

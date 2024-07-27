@@ -11,8 +11,8 @@ class FaqController extends Controller
 {
     public function index()
     {
-        // $page = Faq::get()->pluck('solution_page_id')->toArray();
-        $solutionpages = SolutionPages::get();
+        $page = Faq::get()->pluck('solution_page_id')->toArray();
+        $solutionpages = SolutionPages::whereIn('id', $page)->get();
         return view('admin.pages.faq.index', compact('solutionpages'));
     }
     public function create()
