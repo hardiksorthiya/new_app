@@ -28,18 +28,21 @@
                                     <div class="col-lg-12"><h3>{{$solution_page_name}}</h3></div>
                                     @if(count($page)>0)
                                     @foreach($page as $data)
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-8">
                                         <div class="form-group">
                                             <label for="description">Question</label></br>
-                                            <textarea name="question" class="input-field-hp edit-field-hp" rows="3">{{$data['question']}}</textarea>
+                                            <textarea name="question[]" class="input-field-hp edit-field-hp" rows="3">{{$data['question']}}</textarea>
 
                                             
                                         </div>
                                     </div>
+                                    <div class="col-lg-4">
+                                        <a href="{{url('admin/faq/delete/'. $data['id'])}}">Delete</a>
+                                    </div>
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="description">Answer</label></br>
-                                            <textarea name="answer" class="input-field-hp edit-field-hp" rows="3">{{$data['answer']}}</textarea>
+                                            <textarea name="answer[]" class="input-field-hp edit-field-hp" rows="3">{{$data['answer']}}</textarea>
 
                                             
                                         </div>

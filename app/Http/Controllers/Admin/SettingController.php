@@ -21,18 +21,21 @@ class SettingController extends Controller
         return view('admin.setting.edit', compact('setting'));
     }
     
-    public function update(SettingRequest $request)
+    public function update(SettingRequest $request, $id)
     {     
         $data = $request->validated();
-        $setting = Setting::all();
-        $setting->phone = $data['phone'];
-        $setting->email = $data['email'];
-        $setting->address = $data['address'];
-        $setting->facebook = $data['facebook'];
-        $setting->instagram = $data['instagram'];
-        $setting->youtube = $data['youtube'];
-        $setting->linkedin = $data['linkedin'];
-       
+        $setting = Setting::where('id', $id)->first();
+        $setting->phone = $request->phone;
+        $setting->email = $request->email;
+        $setting->address = $request->address;
+        $setting->facebook = $request->facebook;
+        $setting->instagram = $request->instagram;
+        $setting->youtube = $request->youtube;
+        $setting->linkedin = $request->linkedin;
+        $setting->title = $request->title;
+        // $setting->linkedin = $request->linkedin;
+        // $setting->linkedin = $request->linkedin;
+
 
         if ($request->hasfile('logo')) {
             $file = $request->file('logo');

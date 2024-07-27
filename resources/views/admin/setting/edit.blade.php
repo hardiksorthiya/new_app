@@ -18,8 +18,8 @@
         @endif
         <div class="col-lg-12">
             <div class="section-ineer-main page-design">
-                <form action="edit-setting" method="POST" enctype="multipart/form-data">
-                    @csrf
+                <form action="{{url('admin/edit-setting/'. $setting[0]->id)}}" method="POST" enctype="multipart/form-data">
+                    @csrf    
                     @method('PUT')
                     <div class="row">
                        <div class="col-12">
@@ -63,6 +63,10 @@
                             </div>
 
                             <div class="col-12">
+                            <div class="form-group">
+                                    <label for="phonenumber">Title</label></br>
+                                    <input type="tel" name="title" placeholder="{{$setting[0]->title}}" value="{{$setting[0]->title}}"  class="input-field-hp edit-field-hp">
+                                </div>
                                 <div class="form-group">
                                     <label for="phonenumber">Phone Number</label></br>
                                     <input type="tel" name="phone" placeholder="{{$setting[0]->phone}}" value="{{$setting[0]->phone}}"  class="input-field-hp edit-field-hp">
@@ -77,6 +81,7 @@
                                     <label for="phonenumber">Address</label></br>
                                     <textarea name="address" rows="3"  class="input-field-hp edit-field-hp">{{$setting[0]->address}}</textarea>
                                 </div>
+
                             </div>
 
                             <div class="col-12">
