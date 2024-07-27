@@ -11,8 +11,8 @@ class FaqController extends Controller
 {
     public function index()
     {
-        // $page = Faq::get()->pluck('solution_page_id')->toArray();
-        $solutionpages = SolutionPages::get();
+        $page = Faq::get()->pluck('solution_page_id')->toArray();
+        $solutionpages = SolutionPages::whereIn('id', $page)->get();
         return view('admin.pages.faq.index', compact('solutionpages'));
     }
     public function create()
@@ -43,26 +43,19 @@ class FaqController extends Controller
         // dd($page);
         return view('admin.pages.faq.edit', compact('page', 'solution_page_name', 'solution_id'));
     }
-    public function update( $id)
+    public function update(Request $request ,$id)
     {
         if ($id) {
-            $page = IconBox::findOrFail($page);
-            $page->box_text = $data['box_text'];
-            $page->box_description = $data['box_description'];
-            if ($request->hasfile('box_image')) {
-                $file = $request->file('box_image');
-                $extension = $file->getClientOriginalExtension();
-                $filename = time() . '.' . $extension;
-                $path = 'uploads/icon/';
-                $file->move($path, $filename);
-                $page->box_image = $filename;
-            }
+            $faq = Faq::where('solution_page_id', $id)->first();
+            $faq->solution_page_id = $id;
+            $faq->question = $request->question;
+            $faq->answer = $request->answer;
 
-            $page->update();
+            $faq->save();
 
-            return redirect('admin/iconbox')->with('message', 'iconbox Added Successfully.');
+            return redirect('admin/faq')->with('message', 'Faq Updated Successfully.');
         } else {
-            return redirect('admin/iconbox')->with('error', 'Somthing Error.');
+            return redirect('admin/faq')->with('error', 'Somthing Error.');
         }
 
     }

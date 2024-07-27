@@ -22,41 +22,42 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
-                            <div class="col-lg-12">
+                            <div class="col-lg-4">
                                 <div class="form-group sd-multiSelec">
-                                    <label for="oneimage">Choose Solution Pages</label></br>
-                                    <select name="solution_id" multiple id="current-job-role" class="sd-CustomSelect">
-                                        @foreach ($solutionpages as $i)
-                                        <option value="{{$i->id}}">{{$i->name}}</option>
-                                        @endforeach
-                                    </select>
+                                    <label for="oneimage"><b>Choose Solution Pages</b></label><br><br>
+                                    @foreach ($solutionpages as $i)
+                                    <input type="radio" name="solution_id" value="{{$i->id}}">
+                                    <label for="">{{$i->name}}</label> <br><br>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="col-lg-8">
-                                <div class="form-group">
-                                    <label for="description">Question</label></br>
-                                    <textarea name="question" class="input-field-hp edit-field-hp" rows="3"></textarea>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="description">Question</label></br>
+                                            <textarea name="question" class="input-field-hp edit-field-hp"
+                                                rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="description">Answer</label></br>
+                                            <textarea name="answer" class="input-field-hp edit-field-hp"
+                                                rows="3"></textarea>
 
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="form-group">
-                                    <label for="description">Answer</label></br>
-                                    <textarea name="answer" class="input-field-hp edit-field-hp" rows="3"></textarea>
-
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <button type="submit" class="btn btn-hp-style">Save</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <button type="submit" class="btn btn-hp-style">Save</button>
-                    </div>
-                </div>
+            </form>
         </div>
-        </form>
     </div>
 </div>
 </div>
