@@ -623,7 +623,11 @@ a.extra-fields-customer {
   .ms-drop.bottom ul {
     overflow: overlay;
 }
-
+img.edit-image-section {
+    width: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
 
 
 

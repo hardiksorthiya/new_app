@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="heading-with-btn">
-                <h3 class="content-title">@yield('title')</h3><a href="{{ url('admin/solution/create') }}"
+                <h3 class="content-title">@yield('title')</h3><a href="{{ url('admin/banner/create') }}"
                     class="hp-border-btn">Add Banner</a>
             </div>
         </div>
@@ -36,10 +36,10 @@
                                     $n++;
                                     ?>
                                 </th>
-                                <td>{{ $row->main_image }}</td>
+                                <td><img src="{{ asset('uploads/images/banner/' .$row->main_image)  }}" class="avtar" alt=""></td>
                                 <td>{{ $row->title }}</td>
                                 <td>{{ $row->description }}</td>
-                                <td><a href="{{ url('admin/solution/' . $row->id . '/edit') }}" class="hp-border-btn">Edit</a>
+                                <td><a href="{{ url('admin/banner/' . $row->id . '/edit') }}" class="hp-border-btn">Edit</a>
                                   {{-- <a href="#" class="hp-border-btn" data-bs-toggle="modal" data-bs-target="#deletePage">Delete</a></td> --}}
 
                             </tr>
@@ -72,7 +72,7 @@
                     </tbody>
                    
                 </table>
-                <div>{{$page->links('pagination::bootstrap-5')}}</div>
+                {{-- <div>{{$page->links('pagination::bootstrap-5')}}</div> --}}
             </div>
         </div>
     </div>

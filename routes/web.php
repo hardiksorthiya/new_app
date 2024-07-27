@@ -117,8 +117,12 @@ Route::prefix('admin/')->group(function () {
     // banner
 
     Route::get('banner', [BannerController::class, 'index']);
-    Route::get('banner/create', [IconBoxController::class, 'create']);
-    Route::post('banner', [IconBoxController::class, 'store']);
+    Route::get('banner/create', [BannerController::class, 'create']);
+    Route::post('banner', [BannerController::class, 'store']);
+    Route::get('banner/{banner_id}/edit', [BannerController::class, 'edit']);
+    Route::put('banner/{banner_id}', [BannerController::class, 'update']);
+
+
 
 
 
