@@ -18,22 +18,52 @@
                 <div class="col-md-6 col-xl-auto">
                     <div class="widget footer-widget">
                         <div class="th-widget-about">
-                            <div class="about-logo"><a href="/"><img src="{{asset('assets/images/Netchwood-Finance-Logo-NEWwhite.png')}}"
-                                        alt="Konsal"></a></div>
+                            <div class="about-logo"><a href="/">
+
+                            @if(generalsetting())
+                            @if(generalsetting()->logo)
+                            <img src="{{asset('assets/images/admin/'.generalsetting()->logo)}}" alt="Netchwood">
+                                @else
+                                <img src="{{asset('assets/images/Netchwood-Finance-Logo-NEWwhite.png')}}" alt="Konsal">
+                            @endif
+                        @endif
+
+                            </a></div>
                             <p class="about-text">At Netchwood our purpose is to act with integrity and fairness and in so doing help our clients move forward to a better place.</p>
                             <div class="info-box">
+                            @if(generalsetting())
+                            @if(generalsetting()->phone)
                                 <div class="info-box_icon"><img src="{{asset('assets/images/frontend/home/call.png')}}" alt="call"></div>
-                                <p class="info-box_text"><a href="tel:+11278956825" class="info-box_link">07511 478229</a></p>
+                                <p class="info-box_text">
+
+
+                            <a href="tel:{{generalsetting()->phone}}" class="info-box_link">{{generalsetting()->phone}}</a>
+
+                            </p>
                             </div>
+                            @endif
+                            @endif
+                            @if(generalsetting())
+                            @if(generalsetting()->phone)
+
                             <div class="info-box">
                                 <div class="info-box_icon"><img src="{{asset('assets/images/frontend/home/mail.png')}}" alt="Email"></div>
-                                <p class="info-box_text"><a href="mailto:help@gmail.com"
-                                        class="info-box_link">info@netchwood.co.uk</a></p>
+                                <p class="info-box_text"><a href="mailto:{{generalsetting()->email}}"
+                                        class="info-box_link">{{generalsetting()->email}}</a></p>
                             </div>
+
+                            @endif
+                            @endif
+
+                            @if(generalsetting())
+                            @if(generalsetting()->address)
                             <div class="info-box">
                                 <div class="info-box_icon"><img src="{{asset('assets/images/frontend/home/location.png')}}" alt="Address"></div>
-                                <p class="info-box_text">Atlantic Business Centre, Atlantic Street, Altrincham, WA14 5NQ</p>
+                                <p class="info-box_text">{{generalsetting()->address}}</p>
                             </div>
+
+                            @endif
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -90,12 +120,25 @@
                             <div class="check-group"><input type="checkbox" id="privacyPolicy"> <label
                                     for="privacyPolicy">I agree to the privacy policy</label></div>
                         </form>
-                        <div class="th-social style2"><a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a> <a href="https://www.behance.com/"><i
-                                    class="fab fa-behance"></i></a> <a href="https://www.vimeo.com/"><i
-                                    class="fab fa-vimeo-v"></i></a></div>
+                        @if(generalsetting())         
+                            <div class="th-social style2">
+                                @if(generalsetting()->facebook)
+                                <a href="{{generalsetting()->facebook}}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                @endif                           
+                                @if(generalsetting()->twitter)
+                                <a href="{{generalsetting()->twitter}}" target="_blank"><i class="fab fa-twitter"></i></a>
+                                @endif                             
+                                @if(generalsetting()->instagram)
+                                <a href="{{generalsetting()->instagram}}" target="_blank"><i class="fab fa-instagram"></i></a>
+                                @endif                             
+                                @if(generalsetting()->linkedin)
+                                <a href="{{generalsetting()->linkedin}}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                @endif            
+                                @if(generalsetting()->youtube)
+                                <a href="{{generalsetting()->youtube}}" target="_blank"><i class="fab fa-youtube"></i></a>
+                                @endif             
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -130,4 +173,4 @@
     </svg></div>
     <script src="{{ asset('assets/js/frontend/jquery-3.6.0.min.js') }}"></script>
     {{-- <script src="{{ asset('assets/js/frontend/app.min.js') }}"></script> --}}
-    <script src="{{ asset('assets/js/frontend/main.js') }}"></script> 
+    <script src="{{ asset('assets/js/frontend/main.js') }}"></script>

@@ -33,6 +33,9 @@
       <li>
         <a href="{{url('admin/banner')}}"><i class="fa fa-user"></i>Banner</a>
       </li> 
+      <li>
+        <a href="{{url('admin/faq')}}"><i class="fa fa-user"></i>Faq</a>
+      </li> 
     </ul>
   </aside>
   

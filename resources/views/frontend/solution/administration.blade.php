@@ -1,4 +1,5 @@
 @include('frontend.inc.app')
+
 <body>
     <div class="preloader"><button class="th-btn preloaderCls">Cancel Preloader</button>
         <div class="preloader-inner"><span class="loader"></span></div>
@@ -36,7 +37,7 @@
                             </div>
                             <div class="mb-30 mt-2">{!! $sol_page->descriptiontwo !!}</div>
 
-                            
+
                             <div class="row gy-30 gx-30 justify-content-center">
                                 <div class="col-xl-4 col-lg-12 col-md-4 d-flex align-items-stretch">
                                     <div class="service-card">
@@ -48,28 +49,30 @@
                                                     src="{{ asset('assets/images/frontend/otherpages/maintanin.svg') }}"
                                                     alt="Icon"></div>
                                             <?php
-                                            $n = 01;
-                                            ?>
+$n = 01;
+?>
                                             <div class="service-card-num"><span>{{ $n }}
                                                     <?php
-                                                    $n++;
-                                                    ?></span></div>
+$n++;
+?>
+                                                </span></div>
                                         </div>
                                         <div class="box-content">
-                                            
-                                                {{-- <p class="box-text">{{$sol_page->iconbox->box_description}}</p> --}}
-                                            
-
+                                            @if(count($iconboxData) > 0)
+                                            @foreach($iconboxData as $iconbox)
+                                            <p class="box-text">{{$iconbox['box_description']}}</p>
+                                            @endforeach
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
-                               
+
                             </div>
-                            
+
 
                             <h3 class="sec-title page-title mt-35">{{ $sol_page->titletextsecond }}</h3>
                             <div class="mb-30">{!! $sol_page->descriptionsecond !!}</div>
-                           
+
 
 
 
@@ -155,6 +158,30 @@
                                         class="fa-solid fa-arrow-up-right ms-3"></i></span></a></div>
                     </div>
                 </div>
+
+                <div>
+                    <h3>FAQ's</h3>
+                </div>
+                @if(count($faq)>0)
+                @foreach($faq as $data)
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="description">Question</label></br>
+                        <textarea name="question" class="input-field-hp edit-field-hp"
+                            rows="3">{{$data['question']}}</textarea>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="description">Answer</label></br>
+                        <textarea name="answer" class="input-field-hp edit-field-hp"
+                            rows="3">{{$data['answer']}}</textarea>
+                    </div>
+                </div>
+                @endforeach
+                @else
+                <div class='mt-4'>No FAQ Available!!!!</div>
+                @endif
 
             </div>
 

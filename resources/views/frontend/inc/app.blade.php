@@ -4,14 +4,27 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Netchwood Finance - Netchwood Corporate Insolvency Solutions</title>
+    @if(generalsetting())
+                @if(generalsetting()->title)
+                <title>{{generalsetting()->title}}</title>
+            @else
+            <title>Welcome to Notchwood!!</title>
+            @endif
+            @endif
     <meta name="author" content="Netchwood">
     <meta name="description" content="Netchwood Finance - Netchwood Corporate Insolvency Solutions">
     <meta name="keywords" content="Netchwood">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+    @if(generalsetting())
+                @if(generalsetting()->favicon)
+                <link rel="icon" type="image/png" sizes="192x192" href="{{asset('assets/images/admin/'.generalsetting()->favicon)}}">
+            @else
+            <link rel="icon" type="image/png" sizes="192x192" href="{{asset('assets/images/natch.svg')}}">
+            @endif
+            @endif
     
-    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('assets/images/natch.svg')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
