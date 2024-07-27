@@ -135,8 +135,15 @@
 
 <div class="th-menu-wrapper">
     <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-        <div class="mobile-logo"><a href="/"><img
-                    src="" alt="Netchwood"></a>
+        <div class="mobile-logo"><a href="/">
+        @if(generalsetting())
+                @if(generalsetting()->logo)
+            <img src="{{asset('assets/images/admin/'.generalsetting()->logo)}}" alt="Netchwood">
+            @else
+            <img src="{{asset('assets/images/Netchwood-Finance-Logo-NEWwhite.png')}}" alt="Netchwood">
+            @endif
+            @endif
+            </a>
         </div>
         <div class="th-mobile-menu">
             <ul>
@@ -191,22 +198,42 @@
         <div class="container-fluid">
             <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
                 <div class="col-auto d-none d-lg-block">
+                @if(generalsetting())
+                @if(generalsetting()->welcome_message)
+                    <p class="header-notice">{{generalsetting()->welcome_message}}</p>
+                    @else
                     <p class="header-notice">Welcome to Netchwood Finanace!</p>
+                    @endif
+                @endif
                 </div>
                 <div class="col-auto">
                     <div class="header-links">
                         <ul>
+                            @if(generalsetting())
+                            @if(generalsetting()->phone)
                             <li class="d-none d-xl-inline-block"><i class="fa-solid fa-phone"></i><a
-                                    href="tel:11278956825">07511 478229</a></li>
+                                    href="tel:{{generalsetting()->phone}}">{{generalsetting()->phone}}</a></li>
+                            @endif
+                            @endif
+                            @if(generalsetting())
+                            @if(generalsetting()->email)
                             <li class="d-none d-sm-inline-block"><i class="fa-solid fa-envelope"></i><a
-                                    href="mailto:admin@netchwood.co.uk">admin@netchwood.co.uk</a></li>
+                                    href="mailto:{{generalsetting()->email}}">{{generalsetting()->email}}</a></li>
 
+                            @endif
+                            @endif
+                            @if(generalsetting())
                             <li>
                                 <div class="social-links">
-                                    <a href="https://www.facebook.com/Netchwood-Finance-Ltd-165940284172/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://x.com/i/flow/login?redirect_after_login=%2FNetchwood"><i class="fab fa-twitter"></i></a>
+                                    @if(generalsetting()->facebook)
+                                    <a href="{{generalsetting()->facebook}}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    @endif
+                                    @if(generalsetting()->twitter)
+                                    <a href="{{generalsetting()->twitter}}" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    @endif
                                 </div>
                             </li>
+                            @endif
                         </ul>
                     </div>
                 </div>
@@ -219,9 +246,15 @@
             <div class="container-fluid">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-auto">
-                        <div class="header-logo "><a href="/"><img
-                                    src="{{asset('assets/images/Netchwood-Finance-Logo-NEWwhite.png')}}"
-                                    alt="Netchwood"></a></div>
+                        <div class="header-logo "><a href="/">
+                        @if(generalsetting())
+                            @if(generalsetting()->logo)
+                            <img src="{{asset('assets/images/admin/'.generalsetting()->logo)}}" alt="Netchwood">
+                                @else
+                                <img src="{{asset('assets/images/Netchwood-Finance-Logo-NEWwhite.png')}}" alt="Netchwood">
+                            @endif
+                        @endif
+                        </a></div>
                     </div>
 
                     <div class="col-auto me-xl-auto">
@@ -246,13 +279,13 @@
                                     <ul class="sub-menu">
 
                                         @php
-                                        
+
                                             $sol_page = App\Models\Admin\SolutionPages::where('status','0')->get();
                                         @endphp
                                         @foreach ($sol_page as $item)
                                             <li><a href="{{$item->slug}}">{{$item->name}}</a></li>
                                         @endforeach
-              
+
                                     </ul>
                                 </li>
                                 {{-- <li class="menu-item-has-children"><a href="#">News</a>
