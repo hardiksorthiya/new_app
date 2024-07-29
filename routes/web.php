@@ -86,7 +86,7 @@ Route::prefix('admin/')->group(function () {
     Route::get('create-setting', [SettingController::class, 'create']);
     Route::get('edit-setting', [SettingController::class, 'edit']);
     Route::post('setting/create', [SettingController::class, 'store']);
-    Route::put('edit-setting', [SettingController::class, 'update']);
+    Route::put('edit-setting/{id}', [SettingController::class, 'update']);
 
 
     // pages
@@ -127,6 +127,7 @@ Route::prefix('admin/')->group(function () {
     Route::get('edit-faq/{name}/{id}', [FaqController::class, 'edit']);
     Route::post('faq/create', [FaqController::class, 'store']);
     Route::put('edit-faq/{s_id}', [FaqController::class, 'update']);
+    Route::get('/faq/delete/{id}', [FaqController::class, 'delete']);
 
 
 
